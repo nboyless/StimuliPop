@@ -25,20 +25,32 @@ body {
   color: #ff4d4f;
 }
 
-.start-button {
+.start-button, .settings-button {
   padding: 10px 20px;
   font-size: 1.5rem;
   border: none;
   border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button {
   background-color: #4CAF50;
   color: white;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: background-color 0.3s ease;
 }
 
 .start-button:hover {
   background-color: #45a049;
+}
+
+.settings-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.settings-button:hover {
+  background-color: #1e88e5;
 }
 
 .score-board {
@@ -71,4 +83,70 @@ body {
   background-color: lightgreen;
   box-shadow: 0 0 20px 5px rgba(0,255,0,0.6);
   transform: scale(1.2);
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+.setting {
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  z-index: 100;
+}
+
+.gameover-content {
+  text-align: center;
+}
+
+.play-again-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.play-again-button:hover {
+  background-color: #45a049;
 }
